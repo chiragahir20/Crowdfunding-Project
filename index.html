@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FundFlow - Crowdfunding Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="FundFlow Logo">
+      <h1>Fund Flow</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><button class="donate-btn">Donate Now</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p>Help, Donate & Fundrise</p>
+      <h2>Your Contribution Is Important</h2>
+      <button class="view-campaign-btn">View All Campaign</button>
+    </div>
+    <div class="hero-image">
+      <img src="assets/hero-image.jpg" alt="Donation Image">
+    </div>
+  </section>
+
+  <section class="campaigns">
+    <h2>Ongoing <span class="highlight">Campaign</span></h2>
+    <div class="campaign-cards">
+      <div class="campaign-card" onclick="alert('Donate for Health clicked!')">
+        <img src="assets/health.jpg" alt="Health Campaign">
+        <h3>Donate for Health</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 25.7%;"></div>
+        </div>
+        <p>Raised: <span class="raised">$257</span></p>
+        <p>Goal: <span class="goal">$1000</span></p>
+        <button class="donate-btn">Make A Donation</button>
+      </div>
+      
+      <div class="campaign-card" onclick="alert('Donate for Education clicked!')">
+        <img src="assets/education.jpg" alt="Education Campaign">
+        <h3>Support Education</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 40%;"></div>
+        </div>
+        <p>Raised: <span class="raised">$400</span></p>
+        <p>Goal: <span class="goal">$1000</span></p>
+        <button class="donate-btn">Make A Donation</button>
+      </div>
+
+      <div class="campaign-card" onclick="alert('Donate for Environment clicked!')">
+        <img src="assets/environment.jpg" alt="Environment Campaign">
+        <h3>Save the Environment</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 60%;"></div>
+        </div>
+        <p>Raised: <span class="raised">$600</span></p>
+        <p>Goal: <span class="goal">$1000</span></p>
+        <button class="donate-btn">Make A Donation</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories">
+    <h2>Search By <span class="highlight">Category</span></h2>
+    <div class="category-cards">
+      <div class="category-card" onclick="alert('Environment category clicked!')">
+        <img src="assets/environment.jpg" alt="Environment">
+        <p>Environment</p>
+      </div>
+      <div class="category-card" onclick="alert('Medical category clicked!')">
+        <img src="assets/medical.jpg" alt="Medical">
+        <p>Medical</p>
+      </div>
+      <div class="category-card" onclick="alert('Start-Up category clicked!')">
+        <img src="assets/startup.jpg" alt="Start-Up">
+        <p>Start-Up</p>
+      </div>
+      <div class="category-card" onclick="alert('Education category clicked!')">
+        <img src="assets/education.jpg" alt="Education">
+        <p>Education</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 All rights reserved by FundFlow. Made with ❤️ by Chirag</p>
+  </footer>
+
+  <script>
+    document.querySelector('.view-campaign-btn').addEventListener('click', () => {
+      alert('Redirecting to all campaigns!');
+    });
+
+    document.querySelectorAll('.donate-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Thank you for considering a donation!');
+      });
+    });
+  </script>
+</body>
+</html>
